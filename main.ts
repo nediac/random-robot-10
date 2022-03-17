@@ -1,5 +1,5 @@
 basic.pause(randint(100, 1000))
-let list = randint(1, 25)
+let list = randint(1, 40)
 if (list == 1) {
     mbit_Robot.CarCtrlSpeed(mbit_Robot.CarState.Car_Run, randint(0, 255))
     basic.pause(randint(1, 5000))
@@ -182,6 +182,123 @@ if (list == 24) {
 if (list == 25) {
     mbit_Robot.CarCtrlSpeed2(mbit_Robot.CarState.Car_Right, randint(1, 255), randint(1, 255))
     basic.pause(randint(1, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 26) {
+    mbit_Robot.CarCtrlSpeed2(mbit_Robot.CarState.Car_Stop, randint(1, 255), randint(1, 255))
+    basic.pause(randint(1, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 27) {
+    mbit_Robot.CarCtrlSpeed2(mbit_Robot.CarState.Car_SpinLeft, randint(1, 255), randint(1, 255))
+    basic.pause(randint(1, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 28) {
+    mbit_Robot.CarCtrlSpeed2(mbit_Robot.CarState.Car_SpinRight, randint(1, 255), randint(1, 255))
+    basic.pause(randint(1, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 29) {
+    basic.showIcon(IconNames.Heart)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 30) {
+    basic.showIcon(IconNames.Happy)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 31) {
+    basic.showIcon(IconNames.Asleep)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 32) {
+    basic.showIcon(IconNames.Skull)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 33) {
+    basic.showIcon(IconNames.Ghost)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 34) {
+    basic.showIcon(IconNames.Sad)
+    basic.pause(randint(1, 1000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 35) {
+    basic.showString("Space Dino")
+    basic.pause(randint(5000, 12500))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 36) {
+    basic.showString("Put your hands up")
+    basic.pause(randint(5000, 12500))
+    for (let index = 0; index < 4; index++) {
+        music.playMelody("C D C D C D C D ", 500)
+    }
+    basic.pause(randint(30, 200))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 37) {
+    basic.showString("Wiggle Wiggle")
+    basic.pause(randint(5000, 12500))
+    for (let index = 0; index < 4; index++) {
+        mbit_Robot.CarCtrlSpeed(mbit_Robot.CarState.Car_Left, randint(0, 255))
+        basic.pause(randint(1, 100))
+        mbit_Robot.CarCtrlSpeed(mbit_Robot.CarState.Car_Left, randint(0, 255))
+    }
+    basic.pause(randint(30, 200))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 38) {
+    mbit_Robot.CarCtrlSpeed(mbit_Robot.CarState.Car_Back, randint(0, 255))
+    basic.pause(randint(100, 5000))
+    mbit_Robot.Music_Car(mbit_Robot.enMusic.dadadum)
+    basic.pause(randint(2000, 7500))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 39) {
+    mbit_Robot.Music_Car(mbit_Robot.enMusic.wawawawaa)
+    basic.pause(randint(2000, 7500))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 40) {
+    mbit_Robot.Music_Car(mbit_Robot.enMusic.baddy)
+    basic.pause(randint(2000, 7500))
     control.reset()
 } else {
     game.removeLife(0)
