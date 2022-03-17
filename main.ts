@@ -1,5 +1,5 @@
 basic.pause(randint(100, 1000))
-let list = randint(1, 40)
+let list = randint(1, 45)
 if (list == 1) {
     mbit_Robot.CarCtrlSpeed(mbit_Robot.CarState.Car_Run, randint(0, 255))
     basic.pause(randint(1, 5000))
@@ -299,6 +299,63 @@ if (list == 39) {
 if (list == 40) {
     mbit_Robot.Music_Car(mbit_Robot.enMusic.baddy)
     basic.pause(randint(2000, 7500))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 41) {
+    basic.showString("Guess what number!")
+    basic.pause(randint(2000, 7500))
+    basic.showNumber(randint(randint(1, 100), randint(1, 100)))
+    basic.pause(randint(1000, 7500))
+    basic.showString("Did you get it?")
+    basic.pause(randint(2000, 7500))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 42) {
+    music.setVolume(randint(1, 255))
+    music.playMelody("C5 B A G F E D C ", randint(1, 500))
+    basic.pause(randint(1000, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 43) {
+    music.setVolume(randint(1, 255))
+    music.playMelody("C D E F G A B C5 ", randint(1, 500))
+    basic.pause(randint(1000, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 44) {
+    music.setVolume(randint(1, 255))
+    music.playMelody("F E D C G A B C5 ", randint(1, 500))
+    basic.pause(randint(1000, 5000))
+    control.reset()
+} else {
+    game.removeLife(0)
+}
+if (list == 45) {
+    music.setVolume(randint(1, 255))
+    music.playTone(349, music.beat(BeatFraction.Whole))
+    music.playTone(349, music.beat(BeatFraction.Half))
+    music.playTone(0, music.beat(BeatFraction.Sixteenth))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    music.playTone(0, music.beat(BeatFraction.Sixteenth))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(0, music.beat(BeatFraction.Sixteenth))
+    music.playTone(392, music.beat(BeatFraction.Half))
+    music.playTone(392, music.beat(BeatFraction.Whole))
+    music.playTone(0, music.beat(BeatFraction.Sixteenth))
+    music.playTone(440, music.beat(BeatFraction.Half))
+    music.playTone(440, music.beat(BeatFraction.Whole))
+    music.playTone(0, music.beat(BeatFraction.Sixteenth))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    basic.pause(randint(1000, 5000))
     control.reset()
 } else {
     game.removeLife(0)
